@@ -6,7 +6,7 @@ import { App } from './App.tsx'
 import moment from "moment";
 
 // Importar locale pt-br
-import 'moment/dist/locale/pt-br.js';
+import 'moment/locale/pt-br';
 
 moment.locale("pt-br");
 
