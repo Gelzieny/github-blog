@@ -15,8 +15,6 @@ export function Post() {
 
   const { id } = useParams();
 
-  console.log(repoName);
-
   const getPostDetails = useCallback(async () => {
     try {
       setIsLoading(true);
@@ -24,8 +22,6 @@ export function Post() {
       const response = await api.get(
         `/repos/${username}/${repoName}/issues/${id}`
       );
-
-      console.log(response.data);
 
       setPostData(response.data);
     } finally {

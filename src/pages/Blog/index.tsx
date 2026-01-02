@@ -32,13 +32,8 @@ export function Blog() {
       try {
         setIsLoading(true);
         const url = `/search/issues?q=${query}%20label:published%20repo:${username}/${repoName}`;
-        console.log("URL da API:", url);
-        console.log("Username:", username);
-        console.log("RepoName:", repoName);
         
         const response = await api.get(url);
-          
-        console.log("Resposta da API:", response.data);
 
         setPosts(response.data.items);
       } finally {
