@@ -4,19 +4,32 @@
 
 
 <p align="center">
-  Um blog pessoal que utiliza as issues do GitHub como sistema de publicação de posts
+  Aplicação web de blog pessoal construída em React, onde as issues do GitHub funcionam como posts, explorando consumo de API, rotas dinâmicas, tipagem com TypeScript e boas práticas de desenvolvimento front-end.
 </p>
 
-<p align="center">
-  <img alt="React" src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
-  <img alt="TypeScript" src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white"/>
-  <img alt="Styled Components" src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white"/>
-  <img alt="Vite" src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white"/>
-</p>
+
+## 📄 Instruções do Desafio
+
+Confira os detalhes completos do desafio [clicando aqui](https://efficient-sloth-d85.notion.site/Desafio-03-Github-Blog-13593953670346908462ddc648d42cf1#d1f3e8b0ffe04776952f4d2dad9d4d56).
+
+
+## 🎨 Layout
+
+O layout da aplicação está disponível no [Figma](https://www.figma.com/design/WbfKJ0REa1NH7sN54PI7ri/GitHub-Blog--Community---Copy-?node-id=2-12&p=f&t=neLJfdBRw02kLIVd-0)
+
+
 
 ## 📋 Sobre o Projeto
 
 O **GitHub Blog** é uma aplicação web que transforma as issues de um repositório do GitHub em um blog pessoal. Cada issue marcada com a label `published` se torna um post no blog, permitindo que você escreva seus artigos usando Markdown e aproveite toda a infraestrutura do GitHub para gerenciar seu conteúdo.
+
+## 📸 Preview do Projeto
+
+<p align="center">
+  <img src="https://github.com/Gelzieny/github-blog/blob/main/.github/img/posts.png?raw=true" alt="Home do projeto" width="400"/>
+  <img src="https://github.com/Gelzieny/github-blog/blob/main/.github/img/detalhes_posts.png?raw=true" alt="Detalhes do Post" width="400"/>
+</p>
+
 
 ## ✨ Funcionalidades
 
@@ -84,104 +97,61 @@ github-blog/
 └── vite.config.ts
 ```
 
-## ⚙️ Configuração e Instalação
+
+## 🚀 Como executar o projeto
 
 ### Pré-requisitos
 
-- Node.js (versão 18 ou superior)
-- pnpm, npm ou yarn
-- Uma conta no GitHub
+<p align="justify">Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:</p>
 
-### Passo a Passo
+<a href="https://skillicons.dev">
+  <img src="https://skillicons.dev/icons?i=git,nodejs,vite,vscode" />
+</a>
 
-1. **Clone o repositório**
-   ```bash
-   git clone https://github.com/seu-usuario/github-blog.git
-   cd github-blog
-   ```
 
-2. **Instale as dependências**
-   ```bash
-   pnpm install
-   # ou
-   npm install
-   # ou
-   yarn install
-   ```
 
-3. **Configure as variáveis de ambiente**
-   
-   Crie um arquivo `.env` na raiz do projeto com as seguintes variáveis:
-   ```env
-   VITE_GITHUB_USERNAME=seu-usuario-github
-   VITE_GITHUB_REPONAME=nome-do-repositorio
-   ```
+### 1. Clone o repositório
 
-4. **Crie issues no seu repositório**
+```bash
+# Clone este repositório
+$ git clone https://github.com/Gelzieny/github-blog.git
+
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd github-blog
+
+# Crie um arquivo `.env` na raiz do projeto com as seguintes variáveis
+VITE_GITHUB_USERNAME=seu-usuario-github
+VITE_GITHUB_REPONAME=nome-do-repositorio
+
+# Instale as dependências  pnpm | npm | yarn
+$ npm install
+
+# Execute a aplicação em modo de desenvolvimento pnpm | npm | yarn
+$ npm run dev
+
+```
+### **Crie issues no seu repositório**
    
    - Acesse o repositório no GitHub
    - Crie issues com a label `published`
    - Escreva o conteúdo dos posts em Markdown
 
-5. **Execute o projeto**
-   ```bash
-   pnpm dev
-   # ou
-   npm run dev
-   # ou
-   yarn dev
-   ```
-
-6. **Acesse no navegador**
-   ```
-   http://localhost:5173
-   ```
-
-## 🏗️ Build para Produção
-
-```bash
-pnpm build
-# ou
-npm run build
-# ou
-yarn build
-```
-
-Os arquivos de produção serão gerados na pasta `dist/`.
-
-## 📝 Como Publicar Posts
-
-1. Vá até o repositório configurado no GitHub
-2. Crie uma nova issue
-3. Adicione a label `published` à issue
-4. Escreva seu post usando Markdown
-5. Publique a issue
-6. O post aparecerá automaticamente no blog
-
-## 🎨 Personalização
-
-### Tema
-
-O tema pode ser customizado editando o arquivo [`src/styles/theme/defaultTheme.ts`](src/styles/theme/defaultTheme.ts).
-
-### Fontes
-
-As fontes customizadas podem ser adicionadas na pasta `public/fonts/` e configuradas no arquivo [`src/styles/global.ts`](src/styles/global.ts).
 
 ## 🤝 Contribuindo
 
 Contribuições são sempre bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
 
-## 📄 Licença
+## 📝 Licença
 
-Este projeto está sob a licença MIT.
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-## 👨‍💻 Autor
+# 🧑🏻‍💻 Autor
 
-Desenvolvido com 💜 por [Gelzieny](https://github.com/Gelzieny)
+Feito com ❤️ por Gelzieny R. Martins 👋🏽 [Entre em contato!](https://gelzieny-dev.vercel.app/)
 
 ---
 
 <p align="center">
-  Feito com React + TypeScript + Vite
+⭐ Se este projeto foi útil, considere dar uma estrela!
 </p>
