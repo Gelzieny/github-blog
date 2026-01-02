@@ -4,7 +4,9 @@ import { createRoot } from 'react-dom/client'
 import { App } from './App.tsx'
 
 import moment from "moment";
-import "moment/locale/pt-br";
+
+// Importar locale pt-br
+import 'moment/dist/locale/pt-br.js';
 
 moment.locale("pt-br");
 
