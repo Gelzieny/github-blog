@@ -12,18 +12,18 @@ export function PostContent({ content }: PostContentProps) {
   return (
     <PostContentContainer>
       <ReactMarkdown
-        children={content}
         components={{
-          code({ node, inline, className, children, ...props }) {
+          code({ node, className, children, ...props }) {
             const match = /language-(\w+)/.exec(className || "");
+            const inline = !className;
             return !inline && match ? (
               <SyntaxHighlighter
-                children={String(children).replace(/\n$/, "")}
                 style={dracula as any}
                 language={match[1]}
                 PreTag="div"
-                {...props}
-              />
+              >
+                {String(children).replace(/\n$/, "")}
+              </SyntaxHighlighter>
             ) : (
               <code className={className} {...props}>
                 {children}
@@ -31,7 +31,9 @@ export function PostContent({ content }: PostContentProps) {
             );
           },
         }}
-      />
+      >
+        {content}
+      </ReactMarkdown>
     </PostContentContainer>
   );
 }

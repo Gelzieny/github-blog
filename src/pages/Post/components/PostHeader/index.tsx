@@ -34,13 +34,13 @@ export function PostHeader({ postData, isLoading }: PostHeaderProps) {
       ) : (
         <>
           <header>
-            <ExternalLink
-              as="button"
-              onClick={goBack}
-              icon={<FontAwesomeIcon icon={faChevronLeft} />}
-              text="Voltar"
-              variant="iconLeft"
-            />
+            <button onClick={goBack} style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}>
+              <ExternalLink
+                icon={<FontAwesomeIcon icon={faChevronLeft} />}
+                text="Voltar"
+                variant="iconLeft"
+              />
+            </button>
             <ExternalLink
               text="Ver no Github"
               href={postData.html_url}
